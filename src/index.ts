@@ -16,7 +16,7 @@ app.get('/', (c) => {
            <link rel="stylesheet" href="styles.css" />
            <style>
               h1 { font-size: 1.4rem; margin: 0 0 4px 0; font-weight: 600; letter-spacing: 0.5px; }
-              p.subtitle { font-size: 0.85rem; color: #aaa; }
+              p.subtitle { font-size: 0.85rem; color: #aaa; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
            </style>
         </head>
       </html>
