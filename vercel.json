@@ -1,15 +1,9 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "source": "api/index.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.ts"
-    }
+  "framework": "hono",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index.ts" }
   ]
+
 }
