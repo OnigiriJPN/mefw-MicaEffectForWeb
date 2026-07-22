@@ -1,16 +1,14 @@
-import {handle} from 'hono/vercel'
-import app from '../src/index'
+import { serveStatic } from 'hono/vercel'
+import { Hono } from 'Hono'
+/* import app from '../src/index'
 
 export const GET = handle(app)
 export const POST = handle(app)
 
-const app = new Hono();
+const app = new Hono();*/
 
-app.get('/', (c) => {
-  return c.html(`
-     
-      `)
-});
+app.get('/styles/*', serveStatic({ root: './public' }));
+app.get('/', serveStatic({ path: '.public/index.html'}));
 
 app.get('/cdn/*', (c) => {
   c.header('Cache-Control', 'public, max-age=31536000, immutable')
