@@ -1,1 +1,16 @@
-
+{
+  "name": "mefw",
+  "version": "1.0.0",
+  "description": "MicaEffectForWeb",
+  "main": "api/index.ts",
+  "scripts": {
+    "dev": "hono dev src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
